@@ -91,6 +91,10 @@ RESULTS_BACKEND = RedisCache(
       key_prefix='superset_results'
 )
 
+AUTH_ROLE_PUBLIC = 'Public'
+AUTH_USER_REGISTRATION_ROLE = "Public"
+PUBLIC_ROLE_LIKE = 'Gamma'
+
 {{ if .Values.configOverrides }}
 # Overrides
 {{- range $key, $value := .Values.configOverrides }}
