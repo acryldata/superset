@@ -102,8 +102,8 @@ configMountPath: "/app/pythonpath"
 extraConfigMountPath: "/app/configs"
 
 image:
-  repository: apache/superset
-  tag: latest
+  repository: 795586375822.dkr.ecr.us-west-2.amazonaws.com/datahub-superset
+  tag: demo
   pullPolicy: IfNotPresent
 
 service:

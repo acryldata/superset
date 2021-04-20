@@ -94,6 +94,7 @@ RESULTS_BACKEND = RedisCache(
 AUTH_ROLE_PUBLIC = 'Public'
 AUTH_USER_REGISTRATION_ROLE = "Public"
 PUBLIC_ROLE_LIKE = 'Gamma'
+AUTH_USER_REGISTRATION = True
 
 {{ if .Values.configOverrides }}
 # Overrides
