@@ -43,9 +43,15 @@ spec:
 {{- end }}
   rules:
   {{- range .Values.ingress.hosts }}
-    - host: {{ . }}
+    - host: {{ .host | quote }}
       http:
         paths:
+        {{- range .redirectPaths }}
+          - path: {{ .path }}
+            backend:
+              serviceName: {{ .name }}
+              servicePort: {{ .port }}
+        {{- end }}
           - path: {{ $ingressPath }}
             backend:
               serviceName: {{ $fullName }}
